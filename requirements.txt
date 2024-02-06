@@ -1,0 +1,6 @@
+Flask==3.0.2
+llama-index==0.9.42.post1
+transformers==4.37.2
+torch==2.2.0
+torchaudio==2.2.0
+torchvision==0.17.0
