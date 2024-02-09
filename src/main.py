@@ -18,3 +18,7 @@ def embedding():
 
     embedding = get_text_embedding(text)
     return jsonify({"embedding": embedding})
+
+
+if __name__ == "__main__":
+    app.run(debug=True, port=5000)
