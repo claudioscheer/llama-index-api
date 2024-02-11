@@ -42,7 +42,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"text\": \"shiiiiit\"\n}",
+					"raw": "{\n    \"text\": [\n        \"aaa\",\n        \"bbb\"\n    ]\n}",
 					"options": {
 						"raw": {
 							"language": "json"

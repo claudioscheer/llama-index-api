@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from embed import get_text_embedding
+from embed import get_text_embeddings
 
 app = Flask(__name__)
 
@@ -12,12 +12,12 @@ def index():
 @app.route("/embedding", methods=["POST"])
 def embedding():
     data = request.get_json()
-    text = str(data.get("text", ""))
-    if not text:
-        return jsonify({"error": "text is required"}), 400
+    text_list = data.get("text", [])
+    if len(text_list) == 0:
+        return jsonify({"error": "no text provided"}), 400
 
-    embedding = get_text_embedding(text)
-    return jsonify({"embedding": embedding})
+    embeddings = get_text_embeddings(text_list)
+    return jsonify({"embeddings": embeddings})
 
 
 if __name__ == "__main__":
