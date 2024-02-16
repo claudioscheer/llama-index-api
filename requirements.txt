@@ -1,5 +1,8 @@
 Flask==3.0.2
+llama-cpp-python==0.2.43
 llama-index==0.9.42.post1
+llama-index-embeddings-huggingface==0.1.1
+llama-index-llms-llama-cpp==0.1.1
 transformers==4.37.2
 torch==2.2.0
 torchaudio==2.2.0
